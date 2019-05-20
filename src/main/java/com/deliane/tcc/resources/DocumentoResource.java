@@ -39,4 +39,16 @@ public class DocumentoResource {
 		return service.buscarPorAssunto(assunto);
 		
 	}
+	
+	@RequestMapping(value = "/todos/{busca}" ,method = RequestMethod.GET)
+	public List<Documento> listarTodos(@PathVariable String busca) {
+		return service.buscarTodos(busca);
+		
+	}
+	
+	@RequestMapping(method = RequestMethod.GET)
+	public Integer listarTotal() {
+		return service.buscarPorTitulo("linguagem").size();
+		
+	}
 }

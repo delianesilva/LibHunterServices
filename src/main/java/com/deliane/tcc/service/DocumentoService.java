@@ -1,6 +1,7 @@
 package com.deliane.tcc.service;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.lucene.queryparser.classic.ParseException;
@@ -59,4 +60,38 @@ public class DocumentoService {
 		}
 		return null;
 	}
+	
+	public List<Documento> buscarTodos(String busca){
+		Search search = new Search();
+		List<Documento> todos = new ArrayList<>();
+		List<Documento> assuntos = null;
+		List<Documento> autores = null;
+		List<Documento> titulos = null;
+		
+		try {
+			
+			assuntos = search.textInfoSearch("index","assunto", busca);
+			autores = search.textInfoSearch("index","autor", busca);
+			titulos = search.textInfoSearch("index","titulo", busca);
+			
+			//return documentos;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for (Documento documento : titulos) {
+			todos.add(documento);
+		}
+		for (Documento documento : autores) {
+			todos.add(documento);
+		}
+		for (Documento documento : assuntos) {
+			todos.add(documento);
+		} 
+		return todos;
+	}
+	
 }
