@@ -61,7 +61,6 @@ public class Search {
 			for (String info : doc.getValues("assunto")) {
 				documento.setAssunto(info);
 				System.out.println("assunto: " + info);
-
 			}
 
 			for (String info : doc.getValues("biblioteca")) {
@@ -72,32 +71,36 @@ public class Search {
 			for (String info : doc.getValues("ano")) {
 				documento.setAno(Integer.parseInt(info));
 				System.out.println("ano: " + info);
-
 			}
 
 			for (String info : doc.getValues("instituicao")) {
 				biblioteca.setInstituicao(info);
 				System.out.println("instituicao: " + info);
-
 			}
 
 			for (String info : doc.getValues("endereco")) {
 				biblioteca.setEndereco(info);
 				System.out.println("endereco: " + info);
-
+			}
+			
+			for (String info : doc.getValues("lat")) {
+				biblioteca.setLat(Double.parseDouble(info));
+				System.out.println("lat: " + info);
+			}
+			
+			for (String info : doc.getValues("lng")) {
+				biblioteca.setLng(Double.parseDouble(info));
+				System.out.println("lng: " + info);
 			}
 
 			for (String info : doc.getValues("url")) {
 				biblioteca.setUrl(info);
 				System.out.println("url: " + info);
-
-
 			}
 			
 			for (String info : doc.getValues("categoria")) {
 				documento.setCategoria((info.equals("LIVRO"))? CategoriaEnum.LIVRO:CategoriaEnum.PRODUCAO_ACADEMICA);
 				System.out.println("categoria: " + info);
-
 			}
 			System.out.println("_______________________________________________________");
 			System.out.println("");

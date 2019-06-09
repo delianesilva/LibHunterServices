@@ -63,6 +63,8 @@ public class Indexer {
 		document.add(new Field("biblioteca", documento.getBiblioteca().getNome(), TextField.TYPE_STORED));
 		document.add(new Field("instituicao", documento.getBiblioteca().getInstituicao(), TextField.TYPE_STORED));
 		document.add(new Field("endereco", documento.getBiblioteca().getEndereco(), TextField.TYPE_STORED));
+		document.add(new Field("lat", "" + documento.getBiblioteca().getLat(), TextField.TYPE_STORED));
+		document.add(new Field("lng", "" + documento.getBiblioteca().getLng(), TextField.TYPE_STORED));
 		document.add(new Field("url", documento.getBiblioteca().getUrl(), TextField.TYPE_STORED));
 		document.add(new Field("categoria", documento.getCategoria().name(), TextField.TYPE_STORED));
 		
@@ -74,3 +76,12 @@ public class Indexer {
 	}
 
 }
+
+
+
+
+
+
+
+
+

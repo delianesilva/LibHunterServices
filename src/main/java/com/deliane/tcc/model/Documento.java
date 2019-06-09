@@ -7,7 +7,7 @@ public class Documento implements Serializable{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 2L;	
+	private static final long serialVersionUID = 3L;	
 	private String autor;
     private String titulo;
     private String assunto;//ex: banco de dados

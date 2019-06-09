@@ -1,9 +1,7 @@
 package com.deliane.tcc.resources;
 
-import java.io.IOException;
 import java.util.List;
 
-import org.apache.lucene.queryparser.classic.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.deliane.tcc.model.Documento;
-import com.deliane.tcc.searcher.Search;
 import com.deliane.tcc.service.DocumentoService;
 
 @RestController
