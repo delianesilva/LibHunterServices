@@ -17,7 +17,7 @@ public class DocumentoService {
 		Search search = new Search();
 		try {
 			
-			List<Documento> documentos = search.textInfoSearch("index","titulo", titulo);
+			List<Documento> documentos = search.textInfoSearchStopWords("index","titulo", titulo);
 			return documentos;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -33,7 +33,7 @@ public class DocumentoService {
 		Search search = new Search();
 		try {
 			
-			List<Documento> documentos = search.textInfoSearch("index","autor", autor);
+			List<Documento> documentos = search.textInfoSearchStopWords("index","autor", autor);
 			return documentos;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -49,7 +49,7 @@ public class DocumentoService {
 		Search search = new Search();
 		try {
 			
-			List<Documento> documentos = search.textInfoSearch("index","assunto", assunto);
+			List<Documento> documentos = search.textInfoSearchStopWords("index","assunto", assunto);
 			return documentos;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -70,9 +70,9 @@ public class DocumentoService {
 		
 		try {
 			
-			assuntos = search.textInfoSearch("index","assunto", busca);
-			autores = search.textInfoSearch("index","autor", busca);
-			titulos = search.textInfoSearch("index","titulo", busca);
+			assuntos = search.textInfoSearchStopWords("index","assunto", busca);
+			autores = search.textInfoSearchStopWords("index","autor", busca);
+			titulos = search.textInfoSearchStopWords("index","titulo", busca);
 			
 			//return documentos;
 		} catch (IOException e) {

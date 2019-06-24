@@ -17,7 +17,7 @@ public class IfamTcc2Application implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		Search search = new Search();
-		search.textInfoSearch("index", "titulo", "java");
+		search.textInfoSearchStopWords("index", "titulo", "java");
 		//Indexer indexer = new Indexer();
 		//indexer.indexar();
 		
